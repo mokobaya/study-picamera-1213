@@ -3,8 +3,8 @@ from flask import Flask, render_template, Response
 # from processor.pedestrian_detector import PedestrianDetector as VideoCamera
 #from processor.motion_detector import MotionDetector as VideoCamera
 # from processor.qr_detector import QRDetector as VideoCamera
-from processor.face_detector import FaceDetector as VideoCamera
-# from processor.person_detector import PersonDetector as VideoCamera
+#from processor.face_detector import FaceDetector as VideoCamera
+from processor.person_detector import PersonDetector as VideoCamera
 
 import time
 import threading
@@ -28,8 +28,6 @@ def gen(camera):
 def video_feed():
     return Response(gen(video_camera),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
-                    #font = cv2.FONT_HERSHEY_SIMPLEX
-                    #cv2.putText(img,'OpenCV',(50,50), font, 2,(255,255,255),2,cv2.LINE_AA)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=False, threaded=True)
