@@ -45,6 +45,6 @@ class FaceDetector(object):
             #cv2.putText(frame, 'label', (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
 
             #font = cv2.FONT_HERSHEY_SIMPLEX
-            cv2.putText(frame,'OpenCV',(50,100), cv2.FONT_HERSHEY_SIMPLEX, 2,(255,255,255),2,cv2.LINE_AA)
+            cv2.putText(frame,'OpenCV',(x,y), cv2.FONT_HERSHEY_SIMPLEX, 2,(255,255,255),2,cv2.LINE_AA)
         return frame
     
