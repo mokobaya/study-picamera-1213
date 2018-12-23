@@ -41,6 +41,9 @@ class FaceDetector(object):
         for (x,y,w,h) in faces:
             cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
             # frameを戻り値として返す
+            
+            cv2.putText(frame, label, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
+
             #font = cv2.FONT_HERSHEY_SIMPLEX
             #cv2.putText(img,'OpenCV',(x,y), font, 2,(255,255,255),2,cv2.LINE_AA)
         return frame
